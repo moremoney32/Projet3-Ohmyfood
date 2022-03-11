@@ -1,0 +1,256 @@
+  *,*::after,*,*::before{
+    box-sizing: border-box;
+}
+*{
+    margin:0;
+    padding: 0;
+}
+body{
+    font-family:serif;
+}
+#bloc-page{
+    margin:0 auto;
+    padding: 0;
+    max-width: 1300px;
+    height: 200vh;
+    position: relative; 
+}/*l'en tete*/
+header{
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    font-family: 'Shrikhand', cursive;
+    position: relative;
+}
+.fa-arrow-left-long{
+   position: absolute;
+   left:10px;
+   color:black;
+   top:2px;
+}
+header img{
+    width: 20%;
+}/*milieu de la page*/
+.loader{
+    border:0.5px  white;
+   
+    animation:spin 3s;
+}
+@keyframes spin{
+    0%{
+        transform:translatey(0px);
+        
+    
+    }
+    50%{
+        transform:translatey(10px);
+        
+    
+    }
+    100%{
+        transform: translate(0px);
+        
+    
+    }
+
+}
+section{
+    width: 100%;
+    height: 200vh;
+    margin-top: 15px;
+    position: relative;
+    background-color:red;
+}
+section img{
+    width: 100%;
+    object-fit: cover;
+    height:70vh;
+}
+.palette{
+    width: 98.5%;
+    height:130vh ;
+
+    padding-left:5%;
+    padding-right:5%;
+    background: #f2f2f2;
+    border-radius: 20px 20px 0px 0px;
+    position:absolute;
+    margin-top: -60px;
+    padding-top: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+.titre{
+    display:flex;
+    align-items: center;
+
+}
+h1{
+    font-size: 25px;
+    font-family: 'Shrikhand', cursive;
+}
+.fa-heart-o{
+   margin-left:68%;
+   margin-top:30px;
+}
+.palette p{
+    border-bottom:2px solid #99E2D0;
+    width: 7%;
+    margin-top: 25px;
+}
+/*--debut des animations 1,2,3,4,--*/
+.properties{
+    margin-top: 20px;
+     border:2px solid whitesmoke;
+     width: 95%;
+     border-radius: 10px;
+     height: 7vh;
+     background: white;
+     padding-left: 5px;
+     font-size: 15px;
+     padding-top: 4px;
+     position: relative;
+     
+ }
+ .properties div{
+     position: absolute;
+     width:0%;
+     background: #99E2D0; 
+     right:0;
+     bottom: 0;
+     text-align: center;
+     border-radius: 0px 10px 10px 0px;
+     height: 6.4vh;
+     padding-top: 15px;
+     overflow: hidden;
+ }
+ .properties:hover div{
+    animation:titi 1s linear;
+}
+
+ @keyframes titi{
+     0%{
+         width:0%;
+     }
+     100%{
+        width:46%;
+     }
+ }
+
+
+
+ .properties .fa-circle-check{
+     display:inline-block;  
+     transition:transform 1s;
+     color:white;
+ }
+ .properties:hover .fa-circle-check{
+    transform:rotate(360deg);
+
+ }
+ 
+ .properties h6{
+     text-overflow:ellipsis;
+    overflow:hidden;
+    white-space:nowrap;
+    width:100%;
+    transition:width 2s;
+ }
+ .properties:hover h6{
+     width: 40%; 
+ }
+ 
+  .montant{
+     position:absolute;
+     bottom:2%;
+     left: 92%;  
+}
+.properties:hover .montant{
+    animation:toto 1s linear;
+}
+@keyframes toto{
+    0%{
+        transform:translatex(0px);
+    }
+    
+     100%{
+        transform:translatex(-150px);
+     }
+
+}
+/*----fin animation 1,2,3,4----*/
+ 
+button{
+    width: 20%;
+    height: 30%;
+    text-align: center;
+    color:white;
+    border-radius: 25px; 
+    margin-left: 18%;
+    transition: 3s;
+}
+button:hover{
+    background:#9356DC ;
+
+}
+.button{
+   /* background: red;*/
+    width: 50vh;
+    width: 90%;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
+/*pied-de-la-page*/
+footer{
+    width:100%;
+    font-size: 20px;
+    color:white;
+    padding: 15px;
+    background-color:#2A303D;
+    height: 20vh;
+    position: absolute;
+    bottom:-12%;
+    padding-left:4%;    
+}
+h4 em{
+    font-size: 15px;
+}
+footer span:nth-child(2){
+    margin-left: 8px; 
+    margin-top: 5px;   
+}
+.fa-utensils{
+    margin-top: 5px;
+}
+.pied-page{
+    display:flex;
+   font-size: 10px;
+   margin-top:15px;
+}
+footer p:nth-child(3){
+   margin-left:16px; 
+   margin-top: 5px;   
+}
+.fa-handshake-angle{
+    margin-top: 5px;
+}
+.pied2{
+   display:flex;
+   font-size: 10px;
+   
+
+}
+footer p{
+    font-size: 10px;
+    margin-top: 5px;
+}
+footer a{
+   font-size: 10px;
+   color:white; 
+   text-decoration: none;
+}
+
+
+
+
+
