@@ -21,7 +21,7 @@ header{
     font-family: 'Shrikhand', cursive;
 }
 header img{
-    width: 20%;
+    width: 30%;
 }
 /*---fin du header---*/
 /*---main de la page----*/
@@ -30,9 +30,9 @@ header img{
 }
 .location{
     text-align: center;
-    height: 3vh;
+    height: 4vh;
     background:darkgrey;
-    font-size: 10px;
+    font-size: 15px;
     padding-top: 7px;
 }
 .information{
@@ -98,6 +98,7 @@ h2{
      border-radius: 50%;
      left:-16px;
      background: #9356DC;
+    margin-top:-5px;
 
 
  }
