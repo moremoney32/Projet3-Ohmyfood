@@ -13,32 +13,14 @@ body{
     margin:0 auto;
     padding: 0;
     max-width: 1300px;
-}
-.loader{
-    border:0.5px  white;
    
-    animation:spin 1.5s;
-    opacity: 1;
 }
-@keyframes spin{
-    0%{
-        transform:translatey(0px);
-        opacity: 0.5;
-       
-    
-    }
-    50%{
-        transform:translatey(10px);
-        opacity: 0.5;
-       
-    }
-    100%{
-        transform: translate(0px);
-        opacity: 0.5;
-    
-    }
+.loadeerr{
+    height: 100vh;
+    background-color: red;
+  
 
-}
+
 /*--l'en tete--*/
 header{
     width: 100%;
