@@ -17,7 +17,33 @@ body{
 }
 .loadeerr{
     height: 100vh;
-    background-color: red;
+    background-color:white;
+    position:fixed;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+    opacity:0.9;
+    z-index:10;
+    animation:charger 1s linear;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    transform-origin: top;
+    place-items: center;
+    display:grid;
+}
+.fa-circle-o{
+    color: #9356DC;
+    background: red;
+}
+@keyframes charger{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(0);
+    }
+}
   
 
 
@@ -173,6 +199,9 @@ h2{
  .menu{
      flex-direction: column;
      gap:15px;
+
+     
+     
 
  }
  article{
