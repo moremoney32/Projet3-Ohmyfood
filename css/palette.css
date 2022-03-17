@@ -12,10 +12,11 @@ body{
     margin:0 auto;
     padding: 0;
     max-width: 1300px;
-    height: 200vh;
+    height: 205vh;
     position: relative; 
+   /* background: red;*/
 }/*l'en tete*/
-header{
+.header{
     width: 100%;
     text-align: center;
     margin-top: 30px;
@@ -26,12 +27,13 @@ header{
    position: absolute;
    left:10px;
    color:black;
-   top:2px;
+   top:15%;
 }
-header img{
-    width: 20%;
+/*.header img{
+   /* width:250px;*/
+   /* font-size:150px;
 }/*milieu de la page*/
-.loader{
+/*.loader{
     border:0.5px  white;
    
     animation:spin 3s;
@@ -43,7 +45,7 @@ header img{
     
     }
     50%{
-        transform:translatey(10px);
+        transform:translatey(20px);
         
     
     }
@@ -53,49 +55,77 @@ header img{
     
     }
 
-}
-section{
+}*/
+.section{
     width: 100%;
-    height: 200vh;
+   /* height: 200vh;*/
     margin-top: 15px;
-    position: relative;
+   /* position: relative;*/
     background-color:red;
 }
-section img{
+.section img{
     width: 100%;
     object-fit: cover;
     height:70vh;
+    /*position: relative;*/
 }
 .palette{
-    width: 98.5%;
-    height:130vh ;
+    width:100%;
+    height:150vh ;
 
     padding-left:5%;
-    padding-right:5%;
+    /*padding-right:5%;*/
     background: #f2f2f2;
-    border-radius: 20px 20px 0px 0px;
+    border-radius: 50px 50px 0px 0px;
     position:absolute;
     margin-top: -60px;
     padding-top: 20px;
     font-family: 'Roboto', sans-serif;
+    object-fit: cover;
 }
 .titre{
     display:flex;
     align-items: center;
+    position: relative;
 
 }
 h1{
     font-size: 25px;
     font-family: 'Shrikhand', cursive;
+    
+    /*background:red;*/
+   
 }
 .fa-heart-o{
-   margin-left:68%;
-   margin-top:30px;
+  position: absolute;
+  right:10%;
+  font-size: 23px;
 }
+.fa-heart{
+    font-size: 23px;
+    position: absolute;
+    right:10%;
+    color:transparent;
+    background-clip: text;
+    -webkit-background-clip:text ;
+    background-image:linear-gradient(#FF79DA,#9356DC);
+    opacity: 0;
+    transition:all 1s;
+}
+.titre:hover .fa-heart{
+    opacity:1;
+}
+
+
+/*.fa-heart-o:hover{
+    color:#f67599;
+    
+}*/
 .palette p{
     border-bottom:2px solid #99E2D0;
-    width: 7%;
+    width: 40px;
     margin-top: 25px;
+    font-size: 20px;
 }
 /*--debut des animations 1,2,3,4,--*/
 .properties{
@@ -109,7 +139,20 @@ h1{
      font-size: 15px;
      padding-top: 4px;
      position: relative;
+     animation-name:progressive;
+     animation-duration: 1s;
+     animation-timing-function: ease;       
+ }
+ @keyframes progressive{
+     0%{
+         transform: translatey(15px);
+         opacity: 0;
+     }
+     100%{
+        transform: translatey(0);
+        opacity: 1;
      
+     }
  }
  .properties div{
      position: absolute;
@@ -125,14 +168,48 @@ h1{
  }
  .properties:hover div{
     animation:titi 1s linear;
+    
 }
 
  @keyframes titi{
      0%{
-         width:0%;
+         width:5%;
+     }
+     25%{
+        width:13%;
+     }
+     75%{
+         width: 13%;
+     }
+     80%{
+        width: 13%;
+
+     }
+     90%{
+        width: 13%;
+
+     }
+     95%{
+        width: 13%;
+
+
+     }
+     96%{
+        width: 13%;
+
+     }
+     97%{
+        width: 13%;
+     }
+     98%{
+        width: 13%;
+
+     }
+     99%{
+        width: 7%;
      }
      100%{
-        width:46%;
+         width:5%;
      }
  }
 
@@ -153,15 +230,69 @@ h1{
     overflow:hidden;
     white-space:nowrap;
     width:100%;
-    transition:width 2s;
+    transition:width 2s ease-in;
+    font-size: 12px;
  }
  .properties:hover h6{
-     width: 40%; 
+     animation: rentre 2s;
+      
+ }
+ @keyframes rentre{
+     0%{
+         width:100%;
+     }
+     25%{
+         width:70%;
+     }
+     50%{
+        width:70%;
+
+        
+     }
+     75%{
+        width:100%;
+
+     }
+    
+    100%{
+        width:100%;
+     }
+    /* 90%{
+        width:70%;
+
+     }
+     95%{
+        width:70%;
+
+     }
+     
+     96%{
+        width:70%;
+     }
+    
+     97%{
+        width:70%;
+
+     }
+     98%{
+        width:70%;
+        
+
+
+     }
+     99%{
+        width:90%;
+
+     }
+     100%{
+        width:100%;
+
+     }*/
  }
  
   .montant{
      position:absolute;
-     bottom:2%;
+     bottom:10%;
      left: 92%;  
 }
 .properties:hover .montant{
@@ -169,11 +300,51 @@ h1{
 }
 @keyframes toto{
     0%{
-        transform:translatex(0px);
+        transform:translatex(-40px);
     }
+   25%{
+        transform:translatex(-100px);
+       
+         }
+        
+     
+     75%{
+        transform:translatex(-100px);
+     }
     
+    80%{
+        transform:translatex(-100px);
+     }
+     90%{
+        transform:translatex(-100px);
+
+     }
+     95%{
+        transform:translatex(-100px);
+
+     }
+     
+     96%{
+        transform:translatex(-100px);
+
+     }
+    
+     97%{
+        transform:translatex(-100px);
+
+     }
+     98%{
+        transform:translatex(-100px);
+
+
+     }
+     99%{
+        transform:translatex(-20px);
+
+     }
      100%{
-        transform:translatex(-150px);
+        transform:translatex(0px);
+
      }
 
 }
@@ -186,10 +357,13 @@ button{
     color:white;
     border-radius: 25px; 
     margin-left: 18%;
-    transition: 3s;
+    transition:all 3s;
+    background:#FF79DA ;
+    opacity: 0.7 ;
 }
 button:hover{
-    background:#9356DC ;
+    opacity:1;
+    box-shadow: 5px 5px;
 
 }
 .button{
@@ -207,20 +381,23 @@ footer{
     color:white;
     padding: 15px;
     background-color:#2A303D;
-    height: 20vh;
+   /* height: 30vh;*/
     position: absolute;
     bottom:-12%;
-    padding-left:4%;    
+    padding-left:4%;
+    gap: 7px; 
+      
 }
 h4 em{
     font-size: 15px;
 }
 footer span:nth-child(2){
-    margin-left: 8px; 
-    margin-top: 5px;   
+    margin-left: 15px; 
+    margin-top: 5px; 
+    font-size: 20px;  
 }
 .fa-utensils{
-    margin-top: 5px;
+    margin-top: 10px;
 }
 .pied-page{
     display:flex;
@@ -228,29 +405,27 @@ footer span:nth-child(2){
    margin-top:15px;
 }
 footer p:nth-child(3){
-   margin-left:16px; 
-   margin-top: 5px;   
+   margin-left:18px; 
+   margin-top: 5px; 
+   font-size:20px;  
 }
 .fa-handshake-angle{
-    margin-top: 5px;
+    margin-top: 10px;
 }
 .pied2{
    display:flex;
-   font-size: 10px;
-   
-
+   font-size: 10px; 
 }
 footer p{
-    font-size: 10px;
+    font-size: 18px;
     margin-top: 5px;
 }
-footer a{
-   font-size: 10px;
-   color:white; 
-   text-decoration: none;
+#pied-page{
+    display:flex;
+    flex-direction: column;
+    gap:7px;
+    margin-top:4px;
 }
-
-
-
-
-
+footer a{
+    color:white;
+}
